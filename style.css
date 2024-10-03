@@ -248,3 +248,108 @@ form {
   color: #000; /* Optional: text color for big text */
   margin-top: 5px; /* Adds space between small and big text */
 }
+.mainStuff {
+  display:grid;
+  grid-template-columns: 1.3fr 1.3fr 1.2fr;
+  padding:30px;
+  background-color:#e2e8f0 ;
+  font-family:'Roboto', Times, serif
+}
+.yourStuff {
+  grid-column:span 2;
+  padding:20px;
+}
+.posts {
+  display:grid;
+  grid-template-columns: repeat(2,1fr);
+  gap:20px;
+}
+.post {
+    position: relative;
+    padding: 20px;
+    min-height: 200px; /* Minimum height for posts */
+    background-color:white;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.svg-container {
+    position: absolute; /* Absolute positioning */ /* Distance from the bottom */
+    left: 200px; /* Distance from the right */
+    display: flex; /* Flexbox for horizontal alignment */
+    gap: 5px; /* Space between SVGs */
+}
+
+.mdi {
+    font-size: 24px; /* Set size for the icons */
+    color: #000; /* Change color as needed */
+    cursor: pointer; /* Change cursor to pointer for interaction */
+}
+.post::before {
+  content: '';                  /* Necessary for pseudo-element */
+  position: absolute;           /* Absolute positioning */
+  left: 0;                     /* Align to the left */
+  top: 0;                      /* Align to the top */
+  width: 10px;                 /* Width of the yellow section */
+  height: 100%;                /* Full height of the post */
+  background-color: yellow;    /* Color of the left section */
+  z-index: 1;                  /* Ensures the yellow bar is above the background */
+}
+
+.post > * {
+  position: relative;           /* Make child elements relative to avoid overlap */
+  z-index: 2;                  /* Ensure content is above the yellow bar */
+}
+.stuff {
+  font-size: 24px; /* Makes the title larger */
+  font-weight: bold; /* Makes the title bold */
+  margin-bottom: 10px; /* Adds space below the title */
+  padding:5px;
+
+}
+.sidebar {
+  grid-column: 3;
+  padding:20px;
+}
+.sidey {
+  font-size:24px;
+  font-weight: bold;
+  padding:10px;
+}
+
+
+h3 {
+  margin-bottom: 10px; /* Space below headings */
+}
+
+.announcements,
+.trending {
+  background-color: white; /* White background for rectangles */
+  padding: 10px; /* Space inside each rectangle */
+  margin-bottom: 20px; /* Space between rectangles */
+  border-radius: 5px; /* Rounded corners for rectangles */
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1); /* Shadow for depth */
+}
+
+.announcement {
+  margin-bottom: 10px; /* Space between announcements */
+  padding-bottom: 10px; /* Space below the text */
+  border-bottom: 1px solid #ccc; /* Grey line between announcements */
+}
+.announcement:last-child {
+  border-bottom: none; /* Remove the line from the last announcement */
+}
+.captain {
+  display: flex; /* Flex layout for captain profiles */
+  align-items: center; /* Center items vertically */
+  margin-bottom: 10px; /* Space between captain profiles */
+}
+
+.pfp {
+  width: 40px; /* Width of profile picture */
+  height: 40px; /* Height of profile picture */
+  border-radius: 50%; /* Make profile picture circular */
+  margin-right: 10px; /* Space between image and text */
+}
