@@ -1,2 +1,2 @@
 # aDash
-Admin dashboard project created for Odin Project
+The 24th century dashboard for all Starfleet Captains and Admirals
