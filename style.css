@@ -277,7 +277,8 @@ form {
 
 .svg-container {
     position: absolute; /* Absolute positioning */ /* Distance from the bottom */
-    left: 200px; /* Distance from the right */
+    top:5%;
+    left: 70%; /* Distance from the right */
     display: flex; /* Flexbox for horizontal alignment */
     gap: 5px; /* Space between SVGs */
 }
